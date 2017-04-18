@@ -1,1 +1,305 @@
-<h1> Hello, World! </h1>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+
+    <!--
+<script>
+    $( function() {
+    $( "#datepicker" ).datepicker({
+  altField: "#alternate",
+  altFormat: "YY-MM-DD",
+  onSelect: function(selected,evnt) {
+         updateAb(selected);
+    }
+  });
+
+  function updateAb(value){     
+  var date = $('#yourInputID').val(value);
+  var dateObject = $("#datepicker").datepicker("getDate");
+  var dateString = $.datepicker.formatDate("dd-mm-yy", dateObject);
+}
+  
+</script>-->
+    
+    <style type="text/css">
+      #top {
+        overflow : hidden;
+        left     : 0;
+        width : 460px;
+        height : 3000px;
+	overflow   : hidden;
+        overflow-x : hidden;
+        overflow-y : hidden;
+       position : absolute;
+    }
+    	iframe::-webkit-scrollbar {
+	display: none; 
+	}
+	#bottom {
+	overflow : hidden;
+        left       : 480px;
+        width : 460px;
+        height : 3000px;
+        overflow   : hidden;
+        overflow-x : hidden;
+        overflow-y : hidden;
+	position : absolute;
+    }
+	iframe::-webkit-scrollbar {
+	display: none; 
+	}
+	iframe {
+	overflow : hidden;
+        }
+
+
+</style>
+
+<style type="text/css">
+  
+	iframe::-webkit-scrollbar {
+	display: none; 
+	}
+	iframe {
+	overflow : hidden;
+	position : absolute;
+        }
+
+
+	#cnn {
+		position : absolute;
+    width : 1080px;
+	height : 4770px;
+	-ms-transform: scale(.68);
+    -moz-transform: scale(.68);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(.68);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(.68);
+    -webkit-transform-origin: 0 0;
+    -webkit-overflow-scrolling: auto;
+	}
+
+	
+	#cnnl {
+		position : absolute;
+    width : 1080px;
+    height : 4770px;
+    -ms-transform: scale(.68);
+    -moz-transform: scale(.68);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(.68);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(.68);
+    -webkit-transform-origin: 0 0;
+    -webkit-overflow-scrolling: auto;
+	}
+
+		#wsj {
+		position : absolute;
+    width : 450px;
+    height : 6770px;
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(1);
+    -o-transform-origin: 0 0;
+	-webkit-transform: scale(1);
+    -webkit-transform-origin: 0 0;
+    -webkit-overflow-scrolling: auto;
+	}
+
+#nyt {
+    position : absolute;
+    width : 440px;
+    height : 4770px;
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(1);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(1);
+    -webkit-transform-origin: 0 0;
+    -webkit-overflow-scrolling: auto;
+	}
+
+	#fox {
+	position : absolute;
+	width : 440px;
+    height : 6770px;
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(1);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(1);
+    -webkit-transform-origin: 0 0;
+	-webkit-overflow-scrolling: auto;
+	}
+
+
+
+		#wsjl {
+    width : 450px;
+    height : 6770px;
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(1);
+    -o-transform-origin: 0 0;
+	-webkit-transform: scale(1);
+    -webkit-transform-origin: 0 0;
+    -webkit-overflow-scrolling: auto;
+	}
+
+#nytl {
+    width : 440px;
+    height : 4770px;
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(1);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(1);
+    -webkit-transform-origin: 0 0;
+    -webkit-overflow-scrolling: auto;
+	}
+
+	#foxl {
+	width : 440px;
+    height : 6770px;
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(1);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(1);
+	-webkit-transform-origin: 0 0;
+	-webkit-overflow-scrolling: auto;
+	}
+</style>
+
+
+
+  <script>
+  jQuery(function($) {
+
+  $(".date").datepicker({
+  onSelect: function(dateText) {
+      display("Selected date: <a href=https://cis.upenn.edu/~jamiemor/news/clips/" + dateText + "> today's news </a>; input's current value: " + this.value);
+    }
+  }).on("change", function() {
+   display("Selected date: <a href=https://cis.upenn.edu/~jamiemor/news/clips/" + dateText + "> today's news </a>; input's current value: " + this.value);
+  }).datepicker("setDate", new Date());
+
+  function display(msg) {
+    $("<p>").html(msg).appendTo(document.body);
+  }
+
+    });
+  </script>
+
+
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+
+
+$(function() {
+    $("[name=toggler]").click(function(){
+            $('.toHide').hide();
+            $("#blk-"+$(this).val()).show();
+    });
+ });
+});//]]> 
+
+</script>
+
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+
+
+$(function() {
+    $("[name=togglerr]").click(function(){
+            $('.toHider').hide();
+            $("#blkr-"+$(this).val()).show();
+    });
+ });
+});//]]> 
+
+</script>
+
+<title> Diffy News</title>
+
+
+
+
+</head>
+
+<body>
+
+  
+  
+<link href="https://code.jquery.com/ui/1.9.2/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+<input type='text' class='date'>
+<script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+
+
+  <div id="top">
+<label><input id="rdb1" type="radio" name="toggler" value="1" checked="checked" />CNN</label>
+<label><input id="rdb2" type="radio" name="toggler" value="2" />Fox</label>
+<label><input id="rdb3" type="radio" name="toggler" value="3" />NYTimes</label>
+<label><input id="rdb4" type="radio" name="toggler" value="4" />WSJ</label>
+
+    <div id="blk-1" class="toHide">
+    <p>		    <iframe id="cnn" src="https://dl.dropboxusercontent.com/u/34143925/cnn.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;zoom=34" style="overflow: hidden;"></iframe></p>
+  </div>
+  <div  id="blk-2" class="toHide" style="display:none">
+    <p>   <iframe id="fox" src="https://dl.dropboxusercontent.com/u/34143925/fox.pdf#page=1&amp;zoom=27&amp;toolbar=0&amp;navpanes=0&amp;scrollbar=0" style="overflow: hidden;"></iframe></p>
+  </div>
+ <div  id="blk-3" class="toHide" style="display:none">
+    <p> <iframe id ="nyt" src="https://dl.dropboxusercontent.com/u/34143925/nyt.pdf#page=1&amp;zoom=40&amp;toolbar=0&amp;navpanes=0&amp;scrollbar=0" style="overflow: hidden;"></iframe></p>
+  </div>
+   <div  id="blk-4"  class="toHide" style="display:none">
+<p> <iframe id="wsj" src="https://dl.dropboxusercontent.com/u/34143925/wsj.pdf#page=1&amp;zoom=51&amp;toolbar=0&amp;navpanes=0&amp;scrollbar=0" style="overflow: hidden;"></iframe></p>
+</div>
+</div>
+
+  <div id="bottom">    
+<label><input id="rdbr1" type="radio" name="togglerr" value="1" />CNN</label>
+<label><input id="rdbr2" type="radio" name="togglerr" value="2"  checked />Fox</label>
+<label><input id="rdbr3" type="radio" name="togglerr" value="3" />NYTimes</label>
+<label><input id="rdbr4" type="radio" name="togglerr" value="4" />WSJ</label>
+
+    <div id="blkr-1" class="toHider" style="display:none">
+    <p><iframe id="cnnl" src="https://dl.dropboxusercontent.com/u/34143925/cnn.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;zoom=34" style="overflow: hidden;"></iframe></p>
+  </div>
+  <div id="blkr-2" class="toHider" >
+<p><iframe id="foxl" src="https://dl.dropboxusercontent.com/u/34143925/fox.pdf#page=1&amp;zoom=26&amp;toolbar=0&amp;navpanes=0&amp;scrollbar=0" style="overflow: hidden;"></iframe></p>
+  </div>
+  <div id="blkr-3" class="toHider" style="display:none">
+<p> <iframe id ="nytl" src="https://dl.dropboxusercontent.com/u/34143925/nyt.pdf#page=1&amp;zoom=40&amp;toolbar=0&amp;navpanes=0&amp;scrollbar=0" style="overflow: hidden;"></iframe></p>
+  </div>
+  <div id="blkr-4" class="toHider" style="display:none">
+<p> <iframe id="wsjl" src="https://dl.dropboxusercontent.com/u/34143925/wsj.pdf#page=1&amp;zoom=51&amp;toolbar=0&amp;navpanes=0&amp;scrollbar=0" style="overflow: hidden;"></iframe></p>
+  </div>
+  </div>
+
+</body>
+
+</html>
+
