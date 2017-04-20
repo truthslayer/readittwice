@@ -120,7 +120,8 @@ $(window).on('load', function() {
      var yr = now.year();
      var mon = now.months();
      var day = now.dates();
-     $("#myiframe").attr("src", "news-clips/"+ now.format("YYYY-MM-DD") + "." + now.hours() + "/www.cnn.com-phantomjs.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
+     $("#cnnframe").attr("src", "news-clips/"+ now.format("YYYY-MM-DD") + "." + now.hours() + "/www.cnn.com-phantomjs.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
+     $("#foxframe").attr("src", "news-clips/"+ now.format("YYYY-MM-DD") + "." + now.hours() + "/www.foxnews.com-phantomjs.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
     });
 });
 });//]]> 
@@ -139,7 +140,10 @@ $(window).on('load', function() {
     <input type='text' class='date'>
 <p>
 
-  <iframe id="myiframe">
+  <iframe id="cnnframe">
+  </iframe>
+
+    <iframe id="foxframe">
 </iframe>
 </body>
 
