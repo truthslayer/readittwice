@@ -29,7 +29,7 @@ jQuery(function($) {
 	    var attempt = $(this).datepicker('getDate');
 	    if (today(attempt)) {
                 $("#cnnframe").attr("src", hprefix +  dt_now() + "/www.cnn.com-phantomjs.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
-		$("#foxframe").attr("src", hprefix +  dt_now() + "/www.cnn.com-phantomjs.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
+		$("#foxframe").attr("src", hprefix +  dt_now() + "/www.foxnews.com-phantomjs.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
 	    } else {
                 $("#cnnframe").attr("src", hprefix + this.value + ".23/www.cnn.com-phantomjs.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45")
 		$("#foxframe").attr("src", hprefix + this.value + ".23/www.foxnews.com-phantomjs.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45")
@@ -53,7 +53,11 @@ function dt_now() {
 	    now.subtract(1, 'hours');
 	}
 	var hrs = now.hours();
-	var rounded = hrs < 6 ? 0 : hrs < 9? 6 :  hrs < 12 ? 9 : hrs < 18 ? 12 : hrs < 21 ? 18 : hrs < 23 ? 21 : 23 ;
+        var rounded = hrs < 6 ? 0 : hrs < 9? 6 :  hrs < 12 ? 9 : hrs < 18 ? 12 : hrs < 21 ? 18 : hrs < 23 ? 21 : 23 ;
+	if (rounded == 0) {
+		now.subtract(1, 'days');
+		rounded = 23;
+        }
 	now.hours(rounded);
 	var yr = now.year();
 	var mon = now.months();
