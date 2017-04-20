@@ -14,25 +14,6 @@
   <link rel="stylesheet" href="/resources/demos/style.css">
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     
-
-    <!--
-<script>
-    $( function() {
-    $( "#datepicker" ).datepicker({
-  altField: "#alternate",
-  altFormat: "YY-MM-DD",
-  onSelect: function(selected,evnt) {
-         updateAb(selected);
-    }
-  });
-
-  function updateAb(value){     
-  var date = $('#yourInputID').val(value);
-  var dateObject = $("#datepicker").datepicker("getDate");
-  var dateString = $.datepicker.formatDate("dd-mm-yy", dateObject);
-}
-  
-</script>-->
     
     <style type="text/css">
       #top {
@@ -194,25 +175,6 @@
 
 
 
-  <script>
-  jQuery(function($) {
-
-  $(".date").datepicker({
-  onSelect: function(dateText) {
-      display("Selected date: <a href=https://cis.upenn.edu/~jamiemor/news/clips/" + dateText + "> today's news </a>; input's current value: " + this.value);
-    }
-  }).on("change", function() {
-   display("Selected date: <a href=https://cis.upenn.edu/~jamiemor/news/clips/" + dateText + "> today's news </a>; input's current value: " + this.value);
-  }).datepicker("setDate", new Date());
-
-  function display(msg) {
-    $("<p>").html(msg).appendTo(document.body);
-  }
-
-    });
-  </script>
-
-
 <script type='text/javascript'>//<![CDATA[
 $(window).load(function(){
 
@@ -251,13 +213,6 @@ $(function() {
 <body>
 
   
-  
-<link href="https://code.jquery.com/ui/1.9.2/themes/smoothness/jquery-ui.css" rel="stylesheet" />
-<input type='text' class='date'>
-<script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
-<script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-
-
 
   <div id="top">
 <label><input id="rdb1" type="radio" name="toggler" value="1" checked="checked" />CNN</label>
