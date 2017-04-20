@@ -28,9 +28,11 @@ jQuery(function($) {
 	    var datestring = ("0" + d.getDate()).slice(-2) + "-" + ("0"+(d.getMonth()+1)).slice(-2) + "-" + d.getFullYear() + " " + ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2);
 	    var attempt = $(this).datepicker('getDate');
 	    if (today(attempt)) {
-		$("#myiframe").attr("src", hprefix +  dt_now() + "/www.cnn.com-phantomjs.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
+                $("#cnnframe").attr("src", hprefix +  dt_now() + "/www.cnn.com-phantomjs.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
+		$("#foxframe").attr("src", hprefix +  dt_now() + "/www.cnn.com-phantomjs.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
 	    } else {
-		$("#myiframe").attr("src", hprefix + this.value + ".23/www.cnn.com-phantomjs.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45")
+                $("#cnnframe").attr("src", hprefix + this.value + ".23/www.cnn.com-phantomjs.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45")
+		$("#foxframe").attr("src", hprefix + this.value + ".23/www.foxnews.com-phantomjs.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45")
 		}
 	}
     }).on("change", function() {
@@ -41,7 +43,7 @@ jQuery(function($) {
       function display(msg) {
 	  $("<p>").html(msg).appendTo(document.body);
       }
-    var prefix = "https://dl.dropboxusercontent.com/u/34143925/news-clips/";
+    var prefix = "news-clips/";
     var hprefix = "news-clips/";
 function dt_now() {
 	var timeZone = $(this).data('tz');
