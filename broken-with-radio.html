@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Read it Twice</title>
+    
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.js"></script>
+    <script src="moments/moment.min.js"></script>
+    <script src="moments/moment-timezone.js"></script>
+    <script src="moments/moment-with-locales.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+
+   <script>
+
+
+jQuery(function($) {
+    $(".date").datepicker({
+	dateFormat: "yy-mm-dd",
+	onSelect: function(dateText) {
+	    var _date = new Date();
+	    var _userOffset = _date.getTimezoneOffset()*60*1000; // user's offset time
+	    var _centralOffset = 5*60*60*1000; // 5 for Eastern time
+	    var d = new Date(_date.getTime() - _userOffset + _centralOffset); // redefine variable
+	    var datestring = ("0" + d.getDate()).slice(-2) + "-" + ("0"+(d.getMonth()+1)).slice(-2) + "-" + d.getFullYear() + " " + ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2);
+	    var attempt = $(this).datepicker('getDate');
+	    if (today(attempt)) {
+		$("#myiframe").attr("src", hprefix +  dt_now() + "/www.cnn.com-phantomjs.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
+	    } else {
+		$("#myiframe").attr("src", hprefix + this.value + ".23/www.cnn.com-phantomjs.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45")
+		}
+	}
+    }).on("change", function() {
+	display("Got change event from field");
+    }).datepicker("setDate", new Date());
+
+
+      function display(msg) {
+	  $("<p>").html(msg).appendTo(document.body);
+      }
+    var prefix = "https://dl.dropboxusercontent.com/u/34143925/news-clips/";
+    var hprefix = "news-clips/";
+function dt_now() {
+	var timeZone = $(this).data('tz');
+	var now = moment().tz("America/New_York");
+	var mins = now.minutes();
+	if (mins < 15) {
+	    now.subtract(1, 'hours');
+	}
+	var hrs = now.hours();
+	var rounded = hrs < 6 ? 0 : hrs < 9? 6 :  hrs < 12 ? 9 : hrs < 18 ? 12 : hrs < 21 ? 18 : hrs < 23 ? 21 : 23 ;
+	now.hours(rounded);
+	var yr = now.year();
+	var mon = now.months();
+	var day = now.date();
+	return(now.format("YYYY-MM-DD") + "." + now.hours());
+    }
+
+  function today(td){
+      var d = new Date();
+      return td.getDate() == d.getDate() && td.getMonth() == d.getMonth() && td.getFullYear() == d.getFullYear();
+  }
+
+    function tweek(td){
+	var d = new Date();
+	var tdn = td.getDate();
+	var dn = d.getDate();
+	return tdn <= dn && tdn >= dn -7;
+    }
+    
+    });
+
+$(window).load(function(){
+
+    $("#mydate").datepicker().datepicker("setDate", new Date());
+});//]]> 
+
+</script>
+
+
+
+
+  <style type="text/css">
+ 
+iframe {
+    width: 1200px;
+    height: 4200px;
+    overflow-x:hidden;
+    overflow-y:hidden;
+    overflow: hidden;
+}
+iframe.noScrolling{
+    overflow: hidden;
+}
+  </style>
+  
+
+<script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.6.0/moment.min.js"></script>
+    <script type="text/javascript" src="https://momentjs.com/downloads/moment-timezone-with-data-2010-2020.min.js"></script>
+    
+  
+    <script type='text/javascript'>//<![CDATA[
+$(window).on('load', function() {
+    $(function(){
+    $('.location').each(function() {
+        var timeZone = $(this).data('tz');
+        var now = moment().tz("America/New_York");
+        var mins = now.minutes();
+     if (mins < 15) {
+           now.subtract(1, 'hours');
+      }
+     var hrs = now.hours();
+     var rounded = hrs < 6 ? 0 : hrs < 9? 6 :  hrs < 12 ? 9 : hrs < 18 ? 12 : hrs < 21 ? 18 : hrs < 23 ? 21 : 23 ;
+     now.hours(rounded);
+     var yr = now.year();
+     var mon = now.months();
+     var day = now.dates();
+     $("#myiframe").attr("src", "news-clips/"+ now.format("YYYY-MM-DD") + "." + now.hours() + "/www.cnn.com-phantomjs.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
+    });
+});
+});//]]> 
+
+</script>
+
+  </head>
+
+<body>
+
+<span class="location" data-tz="America/New_York">NYC: </span>
+<br />
+
+   <p>
+<link href="https://code.jquery.com/ui/1.9.2/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+    <input type='text' class='date'>
+<p>
+
+  <iframe id="myiframe">
+</iframe>
+</body>
+
+</html>
+
