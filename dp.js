@@ -32,11 +32,6 @@ jQuery(function($) {
 		}
 	}
     }).on("change", function() {
-	var _date = new Date();
-	var _userOffset = _date.getTimezoneOffset()*60*1000; // user's offset time
-	var _centralOffset = 5*60*60*1000; // 5 for Eastern time
-	var d = new Date(_date.getTime() - _userOffset + _centralOffset); // redefine variable
-	var datestring = ("0" + d.getDate()).slice(-2) + "-" + ("0"+(d.getMonth()+1)).slice(-2) + "-" + d.getFullYear() + " " + ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2);
 	var attempt = $(this).datepicker('getDate');
 	if (today(attempt)) {
             $("#cnn").attr("src", hprefix +  dt_now() + "/www.cnn.com-phantomjs.png#toolbar=0&amp;scrollbar=0&amp;zoom=45");
@@ -59,8 +54,6 @@ jQuery(function($) {
 	}
 	display("Got change event from field");
 }).datepicker("setDate", new Date());
-
-
     var prefix = "news-clips/";
     var hprefix = prefix;
     function dt_now() {
@@ -102,7 +95,32 @@ jQuery(function($) {
 
        
 $(document).ready(function () {
+ var prefix = "news-clips/";
+    var hprefix = prefix;
+    function dt_now() {
+	var lT = moment().tz('America/New_York');
+	var lTnew = lT.format('hh:mm:ss a');
+	var mins = lT.minutes();
+	if (mins < 15) {
+	    lT.subtract(1, 'hours');
+	}
+
+	var hrs = lT.hours();
+        var rounded = hrs < 6 ? 0 : hrs < 9? 6 :  hrs < 12 ? 9 : hrs < 18 ? 12 : hrs < 21 ? 18 : hrs < 23 ? 21 : 23 ;
+	if (rounded == 0) {
+		lT.subtract(1, 'days');
+		rounded = 23;
+        }
+	lT.hours(rounded);
+	var yr = lT.year();
+	var mon = lT.months();
+	var day = lT.date();
+//	alert(lT.format("YYYY-MM-DD") + "." + lT.hours());
+	return(lT.format("YYYY-MM-DD.HH"));
+	
+    }
     $("#mydate").datepicker().datepicker( "setDate", new Date());
+    alert('here');
     $("#cnn").attr("src", hprefix +  dt_now() + "/www.cnn.com-phantomjs.png#toolbar=0&amp;scrollbar=0&amp;zoom=45");
     $("#fox").attr("src", hprefix +  dt_now() + "/www.foxnews.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
     $("#nyt").attr("src", hprefix +  dt_now() + "/www.nytimes.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
