@@ -12,20 +12,20 @@ jQuery(function($) {
 	    var attempt = $(this).datepicker('getDate');
 
 	    if (today(attempt)) {
-                $("#cnn").attr("src", hprefix +  dt_now() + "/www.cnn.com-phantomjs.png#toolbar=0&amp;scrollbar=0&amp;zoom=45");
+                $("#cnn").attr("src", hprefix +  dt_now() + "/www.cnn.com-phantomjs.png");
                 $("#fox").attr("src", hprefix +  dt_now() + "/www.foxnews.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
                 $("#nyt").attr("src", hprefix +  dt_now() + "/www.nytimes.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
 		$("#wsj").attr("src", hprefix +  dt_now() + "/www.wsj.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
-                $("#cnnl").attr("src", hprefix +  dt_now() + "/www.cnn.com-phantomjs.png#toolbar=0&amp;scrollbar=0&amp;zoom=45");
+                $("#cnnl").attr("src", hprefix +  dt_now() + "/www.cnn.com-phantomjs.png");
                 $("#foxl").attr("src", hprefix +  dt_now() + "/www.foxnews.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
                 $("#nytl").attr("src", hprefix +  dt_now() + "/www.nytimes.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
 		$("#wsjl").attr("src", hprefix +  dt_now() + "/www.wsj.com-phantomjs.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
            } else {
-                $("#cnn").attr("src", hprefix + this.value + ".23/www.cnn.com-phantomjs.pdf#toolbar=0&amp;scrollbar=0");
+                $("#cnn").attr("src", hprefix + this.value + ".23/www.cnn.com-phantomjs.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=415");
                 $("#fox").attr("src", hprefix + this.value + ".23/www.foxnews.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
                 $("#nyt").attr("src", hprefix + this.value + ".23/www.nytimes.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
                 $("#wsj").attr("src", hprefix + this.value + ".23/www.wsj.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
-                $("#cnnl").attr("src", hprefix + this.value + ".23/www.cnn.com-phantomjs.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
+                $("#cnnl").attr("src", hprefix + this.value + ".23/www.cnn.com-phantomjs.pdf#toolbar=0&amp;scrollbar=0");
                 $("#foxl").attr("src", hprefix + this.value + ".23/www.foxnews.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
                 $("#nytl").attr("src", hprefix + this.value + ".23/www.nytimes.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45")
 		$("#wsjl").attr("src", hprefix + this.value + ".23/www.wsj.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45")
@@ -34,11 +34,11 @@ jQuery(function($) {
     }).on("change", function() {
 	var attempt = $(this).datepicker('getDate');
 	if (today(attempt)) {
-            $("#cnn").attr("src", hprefix +  dt_now() + "/www.cnn.com-phantomjs.png#toolbar=0&amp;scrollbar=0&amp;zoom=45");
+            $("#cnn").attr("src", hprefix +  dt_now() + "/www.cnn.com-phantomjs.png#toolbar=0&amp;scrollbar=0");
             $("#fox").attr("src", hprefix +  dt_now() + "/www.foxnews.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
             $("#nyt").attr("src", hprefix +  dt_now() + "/www.nytimes.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
 	    $("#wsj").attr("src", hprefix +  dt_now() + "/www.wsj.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
-            $("#cnnl").attr("src", hprefix +  dt_now() + "/www.cnn.com-phantomjs.png#toolbar=0&amp;scrollbar=0&amp;zoom=45");
+            $("#cnnl").attr("src", hprefix +  dt_now() + "/www.cnn.com-phantomjs.png#toolbar=0&amp;scrollbar=0");
             $("#foxl").attr("src", hprefix +  dt_now() + "/www.foxnews.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
             $("#nytl").attr("src", hprefix +  dt_now() + "/www.nytimes.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
 	    $("#wsjl").attr("src", hprefix +  dt_now() + "/www.wsj.com-phantomjs.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
@@ -47,7 +47,7 @@ jQuery(function($) {
             $("#fox").attr("src", hprefix + this.value + ".23/www.foxnews.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
             $("#nyt").attr("src", hprefix + this.value + ".23/www.nytimes.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
             $("#wsj").attr("src", hprefix + this.value + ".23/www.wsj.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
-            $("#cnnl").attr("src", hprefix + this.value + ".23/www.cnn.com-phantomjs.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
+            $("#cnnl").attr("src", hprefix + this.value + ".23/www.cnn.com-phantomjs.pdf#toolbar=0&amp;scrollbar=0");
             $("#foxl").attr("src", hprefix + this.value + ".23/www.foxnews.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
             $("#nytl").attr("src", hprefix + this.value + ".23/www.nytimes.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
 	    $("#wsjl").attr("src", hprefix + this.value + ".23/www.wsj.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
@@ -120,12 +120,11 @@ $(document).ready(function () {
 	
     }
     $("#mydate").datepicker().datepicker( "setDate", new Date());
-    alert('here');
-    $("#cnn").attr("src", hprefix +  dt_now() + "/www.cnn.com-phantomjs.png#toolbar=0&amp;scrollbar=0&amp;zoom=45");
+    $("#cnn").attr("src", hprefix +  dt_now() + "/www.cnn.com-phantomjs.png");
     $("#fox").attr("src", hprefix +  dt_now() + "/www.foxnews.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
     $("#nyt").attr("src", hprefix +  dt_now() + "/www.nytimes.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
     $("#wsj").attr("src", hprefix +  dt_now() + "/www.wsj.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
-        $("#cnnl").attr("src", hprefix +  dt_now() + "/www.cnn.com-phantomjs.png#toolbar=0&amp;scrollbar=0&amp;zoom=45");
+        $("#cnnl").attr("src", hprefix +  dt_now() + "/www.cnn.com-phantomjs.png");
         $("#foxl").attr("src", hprefix +  dt_now() + "/www.foxnews.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
         $("#nytl").attr("src", hprefix +  dt_now() + "/www.nytimes.com-wkh.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
 	$("#wsjl").attr("src", hprefix +  dt_now() + "/www.wsj.com-phantomjs.pdf#toolbar=0&amp;scrollbar=0&amp;zoom=45");
