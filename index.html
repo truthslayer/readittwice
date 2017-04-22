@@ -6,6 +6,7 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="googlebot" content="noindex, nofollow">
   <script type="text/javascript" src="/js/lib/dummy.js"></script>
+  <script type="text/javascript" src="dp2.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/result-light.css">
   
 
@@ -13,18 +14,14 @@
 
   <style type="text/css">
     #the-canvas {
-  border:1px solid black;
-}
+    border:1px solid black;
+    }
   </style>
 
   <title>wtf PDF.js &#39;Hello, world!&#39; example by pdfjs</title>
 
   
-    
-
-
-
-
+   
 <script type='text/javascript'>//<![CDATA[
 window.onload=function(){
 // If absolute URL from the remote server is provided, configure the CORS
@@ -76,6 +73,35 @@ loadingTask.promise.then(function(pdf) {
 
 </script>
 
+
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+
+
+$(function() {
+    $("[name=toggler]").click(function(){
+            $('.toHide').hide();
+            $("#blk-"+$(this).val()).show();
+    });
+ });
+});//]]> 
+
+</script>
+
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+
+
+$(function() {
+    $("[name=togglerr]").click(function(){
+            $('.toHider').hide();
+            $("#blkr-"+$(this).val()).show();
+    });
+ });
+});//]]> 
+
+</script>
+
   
 </head>
 
@@ -83,6 +109,13 @@ loadingTask.promise.then(function(pdf) {
   <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
 
 <h1>PDF.js 'Hello, world!' example</h1>
+
+
+<label><input id="rdb1" type="radio" name="toggler" value="1" checked="checked" />CNN</label>
+<label><input id="rdb2" type="radio" name="toggler" value="2" />Fox</label>
+<label><input id="rdb3" type="radio" name="toggler" value="3" />NYTimes</label>
+<label><input id="rdb4" type="radio" name="toggler" value="4" />WSJ</label>
+
 
 <canvas id="the-canvas"></canvas>
 
