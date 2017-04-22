@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Read it Twice</title>
+    
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.js"></script>
+
+    
+      <script type="text/javascript" src="moment.js"></script>    
+      <script type="text/javascript" src="moment-timezone.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script src="dp.js"> </script>
+    
+      <style type="text/css">
+	
+	iframe {
+	width: 1200px;
+	height: 4200px;
+	overflow-x:hidden;
+	overflow-y:hidden;
+	overflow: hidden;
+	}
+	iframe.noScrolling{
+	overflow: hidden;
+	}
+  
+	#top {
+	overflow : hidden;
+	left     : 0;
+	width : 460px;
+	height : 3000px;
+	overflow   : hidden;
+	overflow-x : hidden;
+	overflow-y : hidden;
+	position : absolute;
+	}
+	iframe::-webkit-scrollbar {
+	display: none; 
+	}
+	#bottom {
+	overflow : hidden;
+	left       : 480px;
+	width : 460px;
+	height : 3000px;
+	overflow   : hidden;
+	overflow-x : hidden;
+	overflow-y : hidden;
+	position : absolute;
+	}
+	iframe::-webkit-scrollbar {
+	display: none; 
+	}
+	iframe {
+	overflow : hidden;
+	}
+	
+
+	#cnn {
+	position : absolute;
+	width : 1080px;
+	height : 4770px;
+	-ms-transform: scale(.68);
+	-moz-transform: scale(.68);
+	-moz-transform-origin: 0 0;
+	-o-transform: scale(.48);
+	-o-transform-origin: 0 0;
+	-webkit-transform: scale(.68);
+	-webkit-transform-origin: 0 0;
+	-webkit-overflow-scrolling: auto;
+	}
+	
+    
+	#cnnl {
+	position : absolute;
+	width : 1080px;
+	height : 4770px;
+	-ms-transform: scale(.68);
+	-moz-transform: scale(.68);
+	-moz-transform-origin: 0 0;
+	-o-transform: scale(.68);
+	-o-transform-origin: 0 0;
+	-webkit-transform: scale(.68);
+	-webkit-transform-origin: 0 0;
+	-webkit-overflow-scrolling: auto;
+	}
+
+	#wsj {
+	position : absolute;
+	width : 450px;
+	height : 6770px;
+	-ms-transform: scale(1);
+	-moz-transform: scale(1);
+	-moz-transform-origin: 0 0;
+	-o-transform: scale(1);
+	-o-transform-origin: 0 0;
+	-webkit-transform: scale(1);
+	-webkit-transform-origin: 0 0;
+	-webkit-overflow-scrolling: auto;
+	}
+
+	#nyt {
+	position : absolute;
+	width : 440px;
+	height : 4770px;
+	-ms-transform: scale(1);
+	-moz-transform: scale(1);
+	-moz-transform-origin: 0 0;
+	-o-transform: scale(1);
+	-o-transform-origin: 0 0;
+	-webkit-transform: scale(1);
+	-webkit-transform-origin: 0 0;
+	-webkit-overflow-scrolling: auto;
+	}
+	
+	#fox {
+	position : absolute;
+	width : 440px;
+	height : 6770px;
+	-ms-transform: scale(1);
+	-moz-transform: scale(1);
+	-moz-transform-origin: 0 0;
+	-o-transform: scale(1);
+	-o-transform-origin: 0 0;
+	-webkit-transform: scale(1);
+	-webkit-transform-origin: 0 0;
+	-webkit-overflow-scrolling: auto;
+	}
+
+	
+	#wsjl {
+	width : 450px;
+	height : 6770px;
+	-ms-transform: scale(1);
+	-moz-transform: scale(1);
+	-moz-transform-origin: 0 0;
+	-o-transform: scale(1);
+	-o-transform-origin: 0 0;
+	-webkit-transform: scale(1);
+	-webkit-transform-origin: 0 0;
+	-webkit-overflow-scrolling: auto;
+	}
+
+	#nytl {
+	width : 440px;
+	height : 4770px;
+	-ms-transform: scale(1);
+	-moz-transform: scale(1);
+	-moz-transform-origin: 0 0;
+	-o-transform: scale(1);
+	-o-transform-origin: 0 0;
+	-webkit-transform: scale(1);
+	-webkit-transform-origin: 0 0;
+	-webkit-overflow-scrolling: auto;
+	}
+
+	#foxl {
+	width : 440px;
+	height : 6770px;
+	-ms-transform: scale(1);
+	-moz-transform: scale(1);
+	-moz-transform-origin: 0 0;
+	-o-transform: scale(1);
+	-o-transform-origin: 0 0;
+	-webkit-transform: scale(1);
+	-webkit-transform-origin: 0 0;
+	-webkit-overflow-scrolling: auto;
+	}
+      </style>
+
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+
+
+$(function() {
+    $("[name=toggler]").click(function(){
+            $('.toHide').hide();
+            $("#blk-"+$(this).val()).show();
+    });
+ });
+});//]]> 
+
+</script>
+
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+
+
+$(function() {
+    $("[name=togglerr]").click(function(){
+            $('.toHider').hide();
+            $("#blkr-"+$(this).val()).show();
+    });
+ });
+});//]]> 
+
+</script>
+
+<script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    
+  </head>
+
+<body>
+
+<span class="location" data-tz="America/New_York">Pick a Date: </span>
+<link href="https://code.jquery.com/ui/1.9.2/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+    <input type='text' class='date'>
+<p>
+
+
+
+  <div id="top">
+<label><input id="rdb1" type="radio" name="toggler" value="1" checked="checked" />CNN</label>
+<label><input id="rdb2" type="radio" name="toggler" value="2" />Fox</label>
+<label><input id="rdb3" type="radio" name="toggler" value="3" />NYTimes</label>
+<label><input id="rdb4" type="radio" name="toggler" value="4" />WSJ</label>
+
+
+    <div id="blk-1" class="toHide">
+    <p><iframe id="cnn" style="overflow: hidden;"></iframe></p>
+  </div>
+  <div  id="blk-2" class="toHide" style="display:none">
+    <p>   <iframe id="fox" style="overflow: hidden;"></iframe></p>
+  </div>
+ <div  id="blk-3" class="toHide" style="display:none">
+    <p> <iframe id ="nyt" style="overflow: hidden;"></iframe></p>
+  </div>
+   <div  id="blk-4"  class="toHide" style="display:none">
+<p> <iframe id="wsj"  style="overflow: hidden;"></iframe></p>
+</div>
+</div>
+
+  <div id="bottom">    
+<label><input id="rdbr1" type="radio" name="togglerr" value="1" />CNN</label>
+<label><input id="rdbr2" type="radio" name="togglerr" value="2"  checked />Fox</label>
+<label><input id="rdbr3" type="radio" name="togglerr" value="3" />NYTimes</label>
+<label><input id="rdbr4" type="radio" name="togglerr" value="4" />WSJ</label>
+
+    <div id="blkr-1" class="toHider" style="display:none">
+    <p><iframe id="cnnl"  style="overflow: hidden;"></iframe></p>
+  </div>
+  <div id="blkr-2" class="toHider" >
+<p><iframe id="foxl" style="overflow: hidden;"></iframe></p>
+  </div>
+  <div id="blkr-3" class="toHider" style="display:none">
+<p> <iframe id ="nytl" style="overflow: hidden;"></iframe></p>
+  </div>
+  <div id="blkr-4" class="toHider" style="display:none">
+<p> <iframe id="wsjl" style="overflow: hidden;"></iframe></p>
+  </div>
+  </div>
+
+  
+</body>
+
+</html>
+
