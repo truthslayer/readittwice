@@ -82,7 +82,7 @@ jQuery(function($) {
 	var mon = lT.months();
 	var day = lT.date();
 //	alert(lT.format("YYYY-MM-DD") + "." + lT.hours());
-	return(lT.format("YYYY-MM-DD") + "." + lT.hours());
+	return(lT.format("YYYY-MM-DD.HH"));
 	
     }
 
