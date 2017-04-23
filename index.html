@@ -50,7 +50,7 @@ loadingTask.promise.then(function(pdf) {
     var viewport = page.getViewport(scale);
 
     // Prepare canvas using PDF page dimensions
-    var canvas = document.getElementById('the-canvas');
+    var canvas = document.getElementById('blk-1');
     var context = canvas.getContext('2d');
     canvas.height = viewport.height;
     canvas.width = viewport.width;
@@ -104,22 +104,7 @@ $(function() {
 
 
 
-<script type='text/javascript'>//<![CDATA[
-  window.onload = function() {
-  document.querySelector("#shape1").onclick = document.querySelector("#shape2").onclick = function() {
-    var canvas = document.querySelector('#displaycanvas');
-    context = canvas.getContext('2d');
-    context.clearRect(0,0,canvas.width,canvas.height);
-    context.beginPath();
-    if (this.id == "shape1") {
-      context.arc(95, 50, 40, 0, 2 * Math.PI);
-    } else {
-      context.rect(50, 27, 350, 400);
-    }
-    context.stroke();
-  }
-  };//]]> 
-  </script>
+
 </head>
 
 <body>
@@ -128,9 +113,6 @@ $(function() {
 <h1>PDF.js 'Hello, world!' example</h1>
 
 
-<label> <input type="radio" id="shape1" name="shape" value="round" /> round</label>
-<label><input type="radio" id="shape2" name="shape" value="box" /> box</label>
-<canvas id="displaycanvas" height="450px" width="820px" style="position:absolute;"></canvas>
 
 
 <label><input id="rdb1" type="radio" name="toggler" value="1" checked="checked" />CNN</label>
@@ -140,9 +122,8 @@ $(function() {
 
 
 <div>
-<div id="blk-1" class="toHide">
-  <canvas id="the-canvas"></canvas>
-</div>
+  <canvas id="blk-1"></canvas>
+
 
 <div id="blk-2" class="toHide">
 </div>
