@@ -81,8 +81,9 @@ $(window).load(function(){
 
 $(function() {
     $("[name=toggler]").click(function(){
-            $('.toHide').hide();
+//            $('.toHide').hide();
             $("#blk-"+$(this).val()).show();
+          $("#blk-"+$(this).val()).style.visibility = 'hidden';
     });
  });
 });//]]> 
@@ -123,8 +124,8 @@ $(function() {
 <label><input id="rdb4" type="radio" name="toggler" value="4" />WSJ</label>
 
 
-<div>
-  <canvas id="blk-1"></canvas>
+
+<canvas id="blk-1"></canvas>
 
 
 <div id="blk-2" class="toHide">
